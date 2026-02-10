@@ -1,0 +1,13 @@
+name: setup java
+
+on: 
+ workflow_dispatch: 
+
+ job:
+  setup-java:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Setup Java JDK
+       uses: actions/setup-java@v5.2.0
+       with:
+         java-version: '17'
