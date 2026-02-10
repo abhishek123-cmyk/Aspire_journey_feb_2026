@@ -1,0 +1,18 @@
+# Name of the Workflow
+name: First workflow
+
+#Trigger
+on:
+ push # event
+
+ jobs:
+   echo-statement: # job name
+    runs-on: ubuntu-latest # github hosted runner
+    steps:
+     -name: Echo
+      run: echo "welcome to first workflow"
+  display-info:
+     runs-on: windows-latest
+     steps:
+          name: Echo
+          run: echo "welcome to first workflow"
